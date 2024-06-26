@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:13:21 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/26 18:50:21 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/26 18:56:48 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,16 @@ int main(void)
 	//std::cout << "\n";
 	//std::cout << "--- Shallow Copy Test Dog (*causing double delete _brain attribute in destruction) ---" << "\n";
 	//Dog dog;
-	//Brain	brain;
-	//brain.setIdea(0, "Original dog's brain");
-	//dog.setBrain(&brain);
+	//Brain	dog_brain;
+	//dog_brain.setIdea(0, "Original dog's brain");
+	//dog.setBrain(&dog_brain);
 	//Dog co_dog = dog;
 	//Dog cc_dog(dog);
 	//std::cout << "original dog's brain             :" << dog.getBrain()->getIdea(0) << "\n";	
 	//std::cout << "copied by operator dog's brain   :" << co_dog.getBrain()->getIdea(0) << "\n";	
 	//std::cout << "copied by constuctor dog's brain :" << cc_dog.getBrain()->getIdea(0) << "\n";	
-	//brain.setIdea(0, "NO DOG BRAIN!!");
-	//dog.setBrain(&brain);
+	//dog_brain.setIdea(0, "NO DOG BRAIN!!");
+	//dog.setBrain(&dog_brain);
 	//std::cout << "original dog's brain             :" << dog.getBrain()->getIdea(0) << "\n";	
 	//std::cout << "copied by operator dog's brain   :" << co_dog.getBrain()->getIdea(0) << "\n";	
 	//std::cout << "copied by constuctor dog's brain :" << cc_dog.getBrain()->getIdea(0) << "\n";	
@@ -63,19 +63,22 @@ int main(void)
 	//std::cout << "\n";
 	//std::cout << "--- Shallow Copy Test Cat (*causing double delete _brain attribute in destruction) ---" << "\n";
 	//Cat cat;
-	//Brain	brain;
-	//brain.setIdea(0, "Original cat's brain");
-	//cat.setBrain(&brain);
+	//Brain	cat_brain;
+	//cat_brain.setIdea(0, "Original cat's brain");
+	//cat.setBrain(&cat_brain);
 	//Cat co_cat = cat;
 	//Cat cc_cat(cat);
 	//std::cout << "original cat's brain             :" << cat.getBrain()->getIdea(0) << "\n";	
 	//std::cout << "copied by operator cat's brain   :" << co_cat.getBrain()->getIdea(0) << "\n";	
 	//std::cout << "copied by constuctor cat's brain :" << cc_cat.getBrain()->getIdea(0) << "\n";	
-	//brain.setIdea(0, "NO CAT BRAIN!!");
-	//cat.setBrain(&brain);
+	//cat_brain.setIdea(0, "NO CAT BRAIN!!");
+	//cat.setBrain(&cat_brain);
 	//std::cout << "original cat's brain             :" << cat.getBrain()->getIdea(0) << "\n";	
 	//std::cout << "copied by operator cat's brain   :" << co_cat.getBrain()->getIdea(0) << "\n";	
 	//std::cout << "copied by constuctor cat's brain :" << cc_cat.getBrain()->getIdea(0) << "\n";	
+
+	//std::cout << "\n";
+	//std::cout << "--- Destruct ---" << "\n";
 
 	return 0;
 
