@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/25 19:24:23 by hiono            ###   ########.fr       */
+/*   Created: 2024/06/25 18:53:17 by hiono             #+#    #+#             */
+/*   Updated: 2024/06/26 17:27:01 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef H_WRONG_CAT_HPP
-# define H_WRONG_CAT_HPP
+#ifndef H_BRAIN_HPP
+# define H_BRAIN_HPP
 
-# include "WrongAnimal.hpp"
 # include <iostream>
 
-class	WrongCat: public WrongAnimal
+class	Brain
 {
 public:
-	WrongCat();
-	WrongCat(WrongCat &rhs);
-	WrongCat &operator=(WrongCat &rhs);
-	~WrongCat();
+	Brain();
+	Brain(Brain &rhs);
+	Brain &operator=(Brain &rhs);
+	~Brain();
+	std::string	getIdea(size_t index) const;
+	void		setIdea(size_t index, std::string idea);
+
+private:
+	std::string	_ideas[100];
 };
 
 #endif

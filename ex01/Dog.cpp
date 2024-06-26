@@ -1,36 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/26 18:51:29 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/26 18:38:56 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include "Cat.hpp"
+#include "Dog.hpp"
+#include "Brain.hpp"
 
-Cat::Cat(): Animal("Cat")
+Dog::Dog(): Animal("Dog")
 {
-	std::cout << "Cat " << _type << " is constructed" << "\n";
+	std::cout << "Dog " << _type << " is constructed" << "\n";
+	_brain = new Brain();
 }
 
-Cat::Cat(const Cat &rhs)
+Dog::Dog(const Dog &rhs)
 {
 	_type = rhs.getType();
+	_brain = rhs.getBrain();
 }
 
-Cat &Cat::operator=(const Cat &rhs)
+Dog &Dog::operator=(const Dog &rhs)
 {
 	if (this != &rhs)
 		*this = rhs;
 	return *this;
 }
 
-Cat::~Cat()
+Dog::~Dog()
 {
-	std::cout << "Cat " << _type << " is destructed" << "\n";
+	std::cout << "Dog " << _type << " is destructed" << "\n";
+	delete _brain;
+}
+
+Brain	*Dog::getBrain() const
+{
+	return _brain;
+}
+
+void	Dog::setBrain(Brain *brain)
+{
+	for (int i = 0; i < 100; i++)
+		_brain->setIdea(i, brain->getIdea(i));
 }

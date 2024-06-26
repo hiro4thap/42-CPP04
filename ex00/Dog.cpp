@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/25 18:11:39 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/26 18:51:53 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ Dog::Dog(): Animal("Dog")
 	std::cout << "Dog " << _type << " is constructed" << "\n";
 }
 
-Dog::Dog(Dog &rhs)
+Dog::Dog(const Dog &rhs)
 {
 	_type = rhs.getType();
 }
 
-Dog &Dog::operator=(Dog &rhs)
+Dog &Dog::operator=(const Dog &rhs)
 {
 	if (this != &rhs)
 		*this = rhs;

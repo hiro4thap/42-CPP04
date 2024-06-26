@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/25 19:24:23 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/26 18:47:47 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef H_WRONG_CAT_HPP
-# define H_WRONG_CAT_HPP
+#ifndef H_CAT_HPP
+# define H_CAT_HPP
 
-# include "WrongAnimal.hpp"
+# include "Animal.hpp"
+# include "Brain.hpp"
 # include <iostream>
 
-class	WrongCat: public WrongAnimal
+class	Cat: public Animal
 {
 public:
-	WrongCat();
-	WrongCat(WrongCat &rhs);
-	WrongCat &operator=(WrongCat &rhs);
-	~WrongCat();
+	Cat();
+	Cat(const Cat &rhs);
+	Cat &operator=(const Cat &rhs);
+	~Cat();
+	Brain	*getBrain() const;
+	void	setBrain(Brain *brain);
+
+private:
+	Brain	*_brain;
 };
 
 #endif

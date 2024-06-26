@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:15:18 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/25 18:16:14 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/26 18:51:00 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class	Animal
 public:
 	Animal();
 	Animal(std::string type);
-	Animal(Animal &rhs);
-	Animal &operator=(Animal &rhs);
+	Animal(const Animal &rhs);
+	Animal &operator=(const Animal &rhs);
 	~Animal();
 	void		makeSound() const;
 	std::string	getType() const;
