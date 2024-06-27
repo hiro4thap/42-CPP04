@@ -1,0 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/27 15:36:44 by hiono             #+#    #+#             */
+/*   Updated: 2024/06/27 17:03:37 by hiono            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Cure.hpp"
+
+Cure::Cure(): AMateria("cure")
+{
+	std::cout << "Cure " << _type << " is construced" << "\n";
+}
+
+Cure::Cure(const Cure &rhs)
+{
+	_type = rhs.getType();
+}
+
+Cure &Cure::operator=(const Cure &rhs)
+{
+	if (this != &rhs)
+		*this = rhs;
+	return *this;
+}
+
+Cure::~Cure()
+{
+	std::cout << "Cure " << _type << " is destruced" << "\n";
+}
+
+Cure 	*Cure::clone() const
+{
+	Cure *clone = new Cure();
+	return clone;
+}
+
+void	Cure::use(ICharacter &target)
+{
+	std::cout << "* heals " << target.getName() << "'s wounds *" << "\n";
+}
