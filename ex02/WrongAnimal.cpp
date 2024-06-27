@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:21:40 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/25 18:32:46 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/27 19:00:08 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,7 @@ WrongAnimal::~WrongAnimal()
 
 void		WrongAnimal::makeSound() const
 {
-	if (_type == "WrongCat")
-		std::cout << "WRONG Miaooowwwwww" << "\n";
-	else if (_type == "WrongDog")
-		std::cout << "WRONG Wooooof" << "\n";
-	else
-		std::cout << "No onomatopoia for this wrong animal" << "\n";
+	std::cout << "WrongAnimal " << _type << "cannot make sound..." << "\n";
 }
 
 std::string	WrongAnimal::getType() const

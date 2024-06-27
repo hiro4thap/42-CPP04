@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:15:18 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/26 18:21:46 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/27 18:53:51 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ public:
 	Animal(const Animal &rhs);
 	Animal &operator=(const Animal &rhs);
 	virtual		~Animal();
-	void		makeSound() const;
-	std::string	getType() const;
-	void		setType(std::string type);
+	virtual void	makeSound() const;
+	std::string		getType() const;
+	void			setType(std::string type);
 
 protected:
 	std::string	_type;

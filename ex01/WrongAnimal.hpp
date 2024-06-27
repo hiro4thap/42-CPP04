@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:15:18 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/25 18:22:50 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/27 19:02:11 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ public:
 	WrongAnimal(std::string type);
 	WrongAnimal(WrongAnimal &rhs);
 	WrongAnimal &operator=(WrongAnimal &rhs);
-	~WrongAnimal();
-	void		makeSound() const;
-	std::string	getType() const;
-	void		setType(std::string type);
+	virtual	~WrongAnimal();
+	virtual void	makeSound() const;
+	std::string		getType() const;
+	void			setType(std::string type);
 
 protected:
 	std::string	_type;

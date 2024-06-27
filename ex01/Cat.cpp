@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 11:51:57 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/27 18:58:04 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ Cat::~Cat()
 {
 	std::cout << "Cat " << _type << " is destructed" << "\n";
 	delete _brain;
+}
+
+void	Cat::makeSound() const
+{
+	std::cout << "MEOWWWWWW" << "\n";
 }
 
 Brain	*Cat::getBrain() const

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/25 18:23:53 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/27 19:01:18 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,9 @@ WrongCat &WrongCat::operator=(WrongCat &rhs)
 WrongCat::~WrongCat()
 {
 	std::cout << "WrongCat " << _type << " is destructed" << "\n";
+}
+
+void	WrongCat::makeSound() const
+{
+	std::cout << "I am WrongCat" << "\n";
 }

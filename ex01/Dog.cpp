@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 11:50:25 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/27 18:58:34 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ Dog::~Dog()
 {
 	std::cout << "Dog " << _type << " is destructed" << "\n";
 	delete _brain;
+}
+
+void	Dog::makeSound() const
+{
+	std::cout << "WOWWWWWWWWWW" << "\n";
 }
 
 Brain	*Dog::getBrain() const
