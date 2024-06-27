@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/26 18:38:56 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/27 11:50:25 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,16 @@ Dog::Dog(): Animal("Dog")
 Dog::Dog(const Dog &rhs)
 {
 	_type = rhs.getType();
-	_brain = rhs.getBrain();
+	_brain = new Brain(*rhs.getBrain());
 }
 
 Dog &Dog::operator=(const Dog &rhs)
 {
 	if (this != &rhs)
-		*this = rhs;
+	{
+		_type = rhs.getType();
+		_brain = new Brain(*rhs.getBrain());
+	}
 	return *this;
 }
 
