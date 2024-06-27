@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/26 18:51:38 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/27 18:51:35 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ public:
 	Cat(const Cat &rhs);
 	Cat &operator=(const Cat &rhs);
 	~Cat();
+	void	makeSound() const;
 };
 
 #endif

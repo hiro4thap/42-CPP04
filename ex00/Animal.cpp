@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:21:40 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/26 18:51:15 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/27 18:49:09 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,9 @@ Animal::~Animal()
 	std::cout << "Animal " << _type << " is destructed" << "\n";
 }
 
-void		Animal::makeSound() const
+void	Animal::makeSound() const
 {
-	if (_type == "Cat")
-		std::cout << "Miaooowwwwww" << "\n";
-	else if (_type == "Dog")
-		std::cout << "Wooooof" << "\n";
-	else
-		std::cout << "No onomatopoia for this animal" << "\n";
+	std::cout << "Animal " << _type << "cannot make sound..." << "\n";
 }
 
 std::string	Animal::getType() const
@@ -56,7 +51,7 @@ std::string	Animal::getType() const
 	return _type;
 }
 
-void		Animal::setType(std::string type)
+void	Animal::setType(std::string type)
 {
 	_type = type;
 }

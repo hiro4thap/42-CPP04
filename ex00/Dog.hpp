@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/26 18:52:01 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/27 18:51:10 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ public:
 	Dog(const Dog &rhs);
 	Dog &operator=(const Dog &rhs);
 	~Dog();
+	void	makeSound() const;
 };
 
 #endif
