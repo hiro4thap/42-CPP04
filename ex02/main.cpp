@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:13:21 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 12:31:47 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 15:57:54 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,8 @@ void	test01(void)
 	Brain	dog_brain;
 	dog_brain.setIdea(0, "Original dog's brain");
 	dog.setBrain(&dog_brain);
-	Dog co_dog = dog;
+	Dog co_dog;
+	co_dog = dog;
 	Dog cc_dog(dog);
 	std::cout << "original dog's brain             :" << dog.getBrain()->getIdea(0) << "\n";	
 	std::cout << "copied by operator dog's brain   :" << co_dog.getBrain()->getIdea(0) << "\n";	
@@ -87,7 +88,8 @@ void	test01(void)
 	Brain	cat_brain;
 	cat_brain.setIdea(0, "Original cat's brain");
 	cat.setBrain(&cat_brain);
-	Cat co_cat = cat;
+	Cat co_cat;
+	co_cat = cat;
 	Cat cc_cat(cat);
 	std::cout << "original cat's brain             :" << cat.getBrain()->getIdea(0) << "\n";	
 	std::cout << "copied by operator cat's brain   :" << co_cat.getBrain()->getIdea(0) << "\n";	
