@@ -6,7 +6,7 @@
 /*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 16:01:41 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/28 14:44:50 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 17:01:43 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,31 @@ void	chara(void)
 	Ardan.use(1, Ben);
 	Ardan.use(2, Ben);
 	Ardan.use(3, Ben);
+	Ardan.use(4, Ben);
+
+	std::cout << "\n";
+	std::cout << "\033[1;31m[ Deep Copy Character by constructor ]\033[0m" << "\n";
+	Character CopyArdan(Ardan);
+	std::cout << "\033[1;31mCopied Character's name: " << CopyArdan.getName() << "\033[0m" << "\n";
+	std::cout << "\033[1;31mCopied Character's inventory[0]: " << CopyArdan.getInventory(0)->getType() << "\033[0m" << "\n";
+	std::cout << "\033[1;31mCopied Character's inventory[1]: " << CopyArdan.getInventory(1)->getType() << "\033[0m" << "\n";
+	std::cout << "\033[1;31mCopied Character's inventory[2]: " << CopyArdan.getInventory(2)->getType() << "\033[0m" << "\n";
+	std::cout << "\033[1;31mCopied Character's inventory[3]: " << CopyArdan.getInventory(3)->getType() << "\033[0m" << "\n";
+	CopyArdan.unequip(0);
+	CopyArdan.use(0, Ben);
+	Ardan.use(0, CopyArdan);
+	std::cout << "\n";
+	std::cout << "\033[1;31m[ Deep Copy Character by assingment ]\033[0m" << "\n";
+	Character AssingArdan = Character();
+	AssingArdan = Ardan;
+	std::cout << "\033[1;31mCopied Character's name: " << AssingArdan.getName() << "\033[0m" << "\n";
+	std::cout << "\033[1;31mCopied Character's inventory[0]: " << AssingArdan.getInventory(0)->getType() << "\033[0m" << "\n";
+	std::cout << "\033[1;31mCopied Character's inventory[1]: " << AssingArdan.getInventory(1)->getType() << "\033[0m" << "\n";
+	std::cout << "\033[1;31mCopied Character's inventory[2]: " << AssingArdan.getInventory(2)->getType() << "\033[0m" << "\n";
+	std::cout << "\033[1;31mCopied Character's inventory[3]: " << AssingArdan.getInventory(3)->getType() << "\033[0m" << "\n";
+	AssingArdan.unequip(0);
+	AssingArdan.use(0, Ben);
+	Ardan.use(0, AssingArdan);
 
 	std::cout << "\n";
 	std::cout << "\033[1;31m[ Unequip Materias ]\033[0m" << "\n";
@@ -116,6 +141,11 @@ void	chara(void)
 	Ardan.use(1, Ben);
 	Ardan.use(2, Ben);
 	Ardan.use(3, Ben);
+
+	std::cout << "\n";
+	std::cout << "\033[1;31m[ Equip Materias again ]\033[0m" << "\n";
+	Ardan.equip(ice->clone());
+	Ardan.use(0, Ben);
 
 	std::cout << "\n";
 	std::cout << "\033[1;31m[ Destruct ]\033[0m" << "\n";

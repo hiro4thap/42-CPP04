@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 13:21:45 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 18:42:38 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 16:48:57 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ public:
 	~Character();
 	std::string const	&getName() const;
 	AMateria 			*getInventory(int index) const;
+	AMateria 			*getTrash(int index) const;
 	void				equip(AMateria* m);
 	void				unequip(int idx);
 	void				use(int idx, ICharacter& target);
