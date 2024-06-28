@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 15:36:44 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 17:03:37 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 13:50:33 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ Cure 	*Cure::clone() const
 
 void	Cure::use(ICharacter &target)
 {
-	std::cout << "* heals " << target.getName() << "'s wounds *" << "\n";
+	std::cout << "\033[1;31m* heals " << target.getName() << "'s wounds *\033[0m" << "\n";
 }

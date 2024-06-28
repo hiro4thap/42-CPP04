@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 15:36:44 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 15:50:42 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 13:50:40 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ Ice 	*Ice::clone() const
 
 void	Ice::use(ICharacter &target)
 {
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << "\n";
+	std::cout << "\033[1;31m* shoots an ice bolt at " << target.getName() << " *\033[0m" << "\n";
 }

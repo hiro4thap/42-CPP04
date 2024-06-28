@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 13:24:19 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 18:42:04 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 13:54:12 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Character::Character(std::string name) :_name(name)
 	std::cout << "Character " << _name << " is constructed" << "\n";
 	for (int i = 0; i < 4; i++)
 		_inventory[i] = NULL;
+	for (int i = 0; i < 100; i++)
+		_trash[i] = NULL;
 }
 
 Character::Character(const Character &rhs)
@@ -72,14 +74,14 @@ void Character::equip(AMateria* m)
 		_inventory[i] = m;
 		return ;
 	}
-	std::cout << _name << "'s inventory is full and cannot store " << m->getType() << "\n";
+	std::cout << "\033[1;31mCharacter " << _name << "'s inventory is full and cannot store " << m->getType() << "\033[0m" << "\n";
 }
 
 void Character::unequip(int idx)
 {
 	if (!_inventory[idx])
 	{
-		std::cout << _name << " does not set materia in inventory " << idx << "\n";
+		std::cout << "\033[1;31mCharacter " << _name << " does not set materia in inventory " << idx << "\033[0m" << "\n";
 		return ;
 	}
 	for (int i = 0; i < 100; i++)
@@ -90,14 +92,14 @@ void Character::unequip(int idx)
 		_inventory[i] = NULL;
 		return ;
 	}
-	std::cout << "trahs is full" << "\n";
+	std::cout << "\033[1;31mCharacter " << _name << "'s trahs is full\033[0m" << "\n";
 }
 
 void Character::use(int idx, ICharacter& target)
 {
 	if (!_inventory[idx])
 	{
-		std::cout << _name << " does not set materia in inventory " << idx << "\n";
+		std::cout << "\033[1;31mCharacter " << _name << " does not set materia in inventory " << idx << "\033[0m" << "\n";
 		return ;
 	}
 	_inventory[idx]->use(target);

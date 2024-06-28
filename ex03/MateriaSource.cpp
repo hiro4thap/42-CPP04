@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 17:10:41 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 18:43:19 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 13:51:57 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void		MateriaSource::learnMateria(AMateria *m)
 		if (_memory[i])
 		return ;
 	}
-	std::cout << "Memories are full in MemorySource" << "\n";
+	std::cout << "\033[1;31mMemories are full in MemorySource\033[0m" << "\n";
 }
 
 AMateria	*MateriaSource::createMateria(std::string const & type)
@@ -69,7 +69,7 @@ AMateria	*MateriaSource::createMateria(std::string const & type)
 			continue ;
 		return _memory[i]->clone();
 	}
-	std::cout << "Cannot find type " << type << " in memories"  << "\n";
+	std::cout << "\033[1;31mCannot find type " << type << " in memories\033[0m" << "\n";
 	return 0;
 }
 
@@ -88,7 +88,7 @@ void	MateriaSource::forgetMateria(int idx)
 {
 	if (!_memory[idx])
 	{
-		std::cout << "MateriaSource does not set materia in memories " << idx << "\n";
+		std::cout << "\033[1;31mMateriaSource does not set materia in memories " << idx << "\033[0m" << "\n";
 		return ;
 	}
 	delete _memory[idx];
