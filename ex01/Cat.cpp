@@ -6,7 +6,7 @@
 /*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 18:58:04 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 17:29:49 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ Cat &Cat::operator=(const Cat &rhs)
 	if (this != &rhs)
 	{
 		_type = rhs.getType();
+		delete _brain;
 		_brain = new Brain(*rhs.getBrain());
 	}
 	return *this;

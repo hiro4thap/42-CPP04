@@ -6,7 +6,7 @@
 /*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 16:01:41 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/28 17:01:43 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 18:05:08 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,11 +75,38 @@ void	materia(void)
 	std::cout << "\n";
 	AMateria *blank = src->createMateria("blank");
 	std::cout << "\033[1;31mreturn value: " << blank << "\033[0m" << "\n";
-	std::cout << "\n";
-	std::cout << "\033[1;31m[ Destruct ]\033[0m" << "\n";
 	delete src;
 	delete ice;
 	delete cure;
+
+	std::cout << "\n";
+	std::cout << "\033[1;31m[ Copy Ice ]\033[0m" << "\n";
+	Ice m_ice;
+	Ice cc_ice = m_ice;
+	Ice co_ice;
+	co_ice = m_ice;
+	std::cout << "\033[1;31mOriginal ice's type: " << m_ice.getType() << "\033[0m" << "\n";
+	m_ice.use(Aden);
+	std::cout << "\033[1;31mConstructor-copied ice's type: " << cc_ice.getType() << "\033[0m" << "\n";
+	cc_ice.use(Aden);
+	std::cout << "\033[1;31mOperator-copied  ice's type: " << co_ice.getType() << "\033[0m" << "\n";
+	co_ice.use(Aden);
+
+	std::cout << "\n";
+	std::cout << "\033[1;31m[ Copy Cure ]\033[0m" << "\n";
+	Cure m_cure;
+	Cure cc_cure = m_cure;
+	Cure co_cure;
+	co_cure = m_cure;
+	std::cout << "\033[1;31mOriginal cure's type: " << m_cure.getType() << "\033[0m" << "\n";
+	m_cure.use(Aden);
+	std::cout << "\033[1;31mConstructor-copied cure's type: " << cc_cure.getType() << "\033[0m" << "\n";
+	cc_cure.use(Aden);
+	std::cout << "\033[1;31mOperator-copied  cure's type: " << co_cure.getType() << "\033[0m" << "\n";
+	co_cure.use(Aden);
+
+	std::cout << "\n";
+	std::cout << "\033[1;31m[ Destruct ]\033[0m" << "\n";
 }
 
 void	chara(void)

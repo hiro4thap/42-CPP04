@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:13:21 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/28 15:57:54 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 17:33:39 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 void	test00(void)
 {
 	std::cout << "[  AAnimal Construct ]" << std::endl;
-	//const AAnimal* meta = new AAnimal(); -> instantiating AAnimal causes error
+	//const AAnimal* meta = new AAnimal(); //-> instantiating AAnimal causes error
 	const AAnimal* j = new Dog();
 	const AAnimal* i = new Cat();
 	std::cout << std::endl;

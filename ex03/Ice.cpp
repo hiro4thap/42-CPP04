@@ -6,7 +6,7 @@
 /*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 15:36:44 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/28 13:50:40 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 18:03:48 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,14 @@ Ice::Ice(): AMateria("ice")
 	std::cout << "Ice " << _type << " is construced" << "\n";
 }
 
-Ice::Ice(const Ice &rhs)
+Ice::Ice(const Ice &rhs): AMateria("ice")
 {
-	_type = rhs.getType();
+	(void)rhs;
 }
 
 Ice &Ice::operator=(const Ice &rhs)
 {
-	if (this != &rhs)
-		*this = rhs;
+	(void)rhs;
 	return *this;
 }
 

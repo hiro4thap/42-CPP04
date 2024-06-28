@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:13:21 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 12:02:40 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 17:05:19 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int main()
 {
-	std::cout << "[  Animal Construct ]" << std::endl;
+	std::cout << "[ Animal Construct ]" << std::endl;
 	const Animal* meta = new Animal();
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();

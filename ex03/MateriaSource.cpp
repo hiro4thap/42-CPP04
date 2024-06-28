@@ -6,7 +6,7 @@
 /*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 17:10:41 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/28 15:50:04 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 18:13:33 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ MateriaSource::MateriaSource(const MateriaSource &rhs)
 	clearMemories();
 	for (int i = 0; i < 4; i++)
 	{
-		if (!_memory[i])
-			continue ;
-		_memory[i] = rhs.getMateria(i);
+		_memory[i] = NULL;
+		if (rhs.getMemory(i))
+			_memory[i] = rhs.getMemory(i)->clone();
 	}
 }
 
@@ -43,7 +43,7 @@ MateriaSource::~MateriaSource()
 	std::cout << "MateriaSource is destructed" << "\n";
 }
 	
-AMateria	*MateriaSource::getMateria(int idx) const
+AMateria	*MateriaSource::getMemory(int idx) const
 {
 	if (idx < 0 || 3 < idx)
 	{
@@ -87,20 +87,4 @@ void	MateriaSource::clearMemories()
 		delete _memory[i];
 		_memory[i] = NULL;
 	}
-}
-
-void	MateriaSource::forgetMateria(int idx)
-{
-	if (idx < 0 || 3 < idx)
-	{
-		std::cout << "\033[1;31mInvalid index for memory. It should be 0 to 3\033[0m" << "\n";
-		return;
-	}
-	if (!_memory[idx])
-	{
-		std::cout << "\033[1;31mMateriaSource does not set materia in memories " << idx << "\033[0m" << "\n";
-		return ;
-	}
-	delete _memory[idx];
-	_memory[idx] = NULL;
 }

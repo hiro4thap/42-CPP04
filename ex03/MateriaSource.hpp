@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 17:10:46 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 18:33:45 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 18:13:18 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ public:
 	MateriaSource(const MateriaSource &rhs);
 	MateriaSource &operator=(const MateriaSource &rhs);
 	~MateriaSource();
-	AMateria	*getMateria(int idx) const;
+	AMateria	*getMemory(int idx) const;
 	void		learnMateria(AMateria*);
 	AMateria*	createMateria(std::string const & type);
-	void		forgetMateria(int idx);
 
 private:
 	AMateria	*_memory[4];

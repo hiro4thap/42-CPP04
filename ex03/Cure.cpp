@@ -6,7 +6,7 @@
 /*   By: hiono <hiono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 15:36:44 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/28 13:50:33 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 18:04:13 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,14 @@ Cure::Cure(): AMateria("cure")
 	std::cout << "Cure " << _type << " is construced" << "\n";
 }
 
-Cure::Cure(const Cure &rhs)
+Cure::Cure(const Cure &rhs): AMateria("cure")
 {
-	_type = rhs.getType();
+	(void)rhs;
 }
 
 Cure &Cure::operator=(const Cure &rhs)
 {
-	if (this != &rhs)
-		*this = rhs;
+	(void)rhs;
 	return *this;
 }
 

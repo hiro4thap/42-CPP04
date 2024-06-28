@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:55:17 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 12:21:52 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 17:32:07 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ Dog &Dog::operator=(const Dog &rhs)
 	if (this != &rhs)
 	{
 		_type = rhs.getType();
+		delete _brain;
 		_brain = new Brain(*rhs.getBrain());
 	}
 	return *this;

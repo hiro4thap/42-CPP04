@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:13:21 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/28 15:58:57 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 17:30:28 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int main(void)
 	Animal *animal_array[size];
 	for (int i = 0; i < size; i++)
 	{
+		std::cout << "array index: " << i << "\n";
 		if (i % 2 == 0)
 			animal_array[i] = new Dog();
 		else
@@ -40,6 +41,7 @@ int main(void)
 	std::cout << "[ - Destruct - ]" << "\n";
 	for (int i = 0; i < size; i++)
 	{
+		std::cout << "array index: " << i << "\n";
 		delete animal_array[i];
 	}
 

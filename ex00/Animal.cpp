@@ -6,7 +6,7 @@
 /*   By: hiono <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:21:40 by hiono             #+#    #+#             */
-/*   Updated: 2024/06/27 18:49:09 by hiono            ###   ########.fr       */
+/*   Updated: 2024/06/28 17:05:45 by hiono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Animal::~Animal()
 
 void	Animal::makeSound() const
 {
-	std::cout << "Animal " << _type << "cannot make sound..." << "\n";
+	std::cout << "Animal " << _type << " cannot make sound..." << "\n";
 }
 
 std::string	Animal::getType() const
